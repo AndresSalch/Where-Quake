@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Where Quake - Sismos</title>
+    <link rel="icon" type="image/x-icon" href="./Styles/Src/Logo.ico" />
+
+    <link rel="stylesheet" href="./Styles/sismos.css" />
+    <script src="./deploy/api.js"></script>
+    <link
+      href="https://db.onlinewebfonts.com/c/91d3afe918937141b6ae8e43b1005bc8?family=Sharp+Grotesk+Book+25+Regular"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/5d2221dcbb.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body onload="initialize()">
+    <header>
+      <div class="head">
+        <ul class="hlist">
+          <li class="hitem"><a href="index.html" class="access">Inicio</a></li>
+          <li class="hitem">
+            <a href="sismos.html" class="current">Sismos</a>
+          </li>
+          <li class="hitem">
+            <a href="about.html" class="access">Sobre Nosotros</a>
+          </li>
+          <li class="hitem hide" id="add">
+            <a href="profile.html" id="user" class="access"></a>
+          </li>
+          <li class="hitem">
+            <a href="admin.html" id="admin" class="access hide"
+              >Administración</a
+            >
+          </li>
+          <li class="hitem">
+            <i id="news" class="fa-regular fa-newspaper access"></i>
+          </li>
+        </ul>
+        <div id="content" class="messages hide"></div>
+      </div>
+    </header>
+    <div class="MainBody">
+      <div id="earth_div"></div>
+      <div class="Rightpane">
+        <p>Sismos Sentidos</p>
+        <div class="selectors">
+          <select id="select1">
+            <option value="default" selected>Ordenar por</option>
+            <option value="1">Fecha Ascendente</option>
+            <option value="2">Fecha Descedente</option>
+            <option value="3">Magnitud Ascendente</option>
+            <option value="4">Magnitud Descedente</option>
+          </select>
+          <select class="countries" id="select2">
+            <option value="default" selected>Todos los Paises</option>
+          </select>
+        </div>
+        <div class="itemPane"></div>
+      </div>
+    </div>
+    <script src="./Scripts/sismos.js"></script>
+  </body>
+</html>

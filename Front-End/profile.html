@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./Styles/profile.css" />
+    <script
+      src="https://kit.fontawesome.com/5d2221dcbb.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Where Quake - Mi Perfil</title>
+    <link rel="icon" type="image/x-icon" href="./Styles/Src/Logo.ico" />
+  </head>
+  <body>
+    <header>
+      <div class="head">
+        <ul class="hlist">
+          <li class="hitem"><a href="index.html" class="access">Inicio</a></li>
+          <li class="hitem">
+            <a href="sismos.html" class="access">Sismos</a>
+          </li>
+          <li class="hitem">
+            <a href="about.html" class="access">Sobre Nosotros</a>
+          </li>
+          <li class="hitem hide" id="add">
+            <a href="profile.html" id="user" class="current"></a>
+          </li>
+          <li class="hitem">
+            <a href="admin.html" id="admin" class="access hide"
+              >Administración</a
+            >
+          </li>
+          <li class="hitem">
+            <i id="news" class="fa-regular fa-newspaper access"></i>
+          </li>
+        </ul>
+        <div id="content" class="messages hide"></div>
+      </div>
+    </header>
+    <br />
+    <div id="hiddenPROF" class="hiddenC hide">
+      <form id="prof" class="">
+        <div class="item">
+          <input
+            type="text"
+            id="name2"
+            name="name"
+            placeholder="Nombre"
+            pattern="^[a-zA-Z\s]{3,}$"
+            title="El nombre debe contener solo letras, con un mínimo de 3 caracteres."
+            disabled
+          />
+          <i id="editName" class="fa-solid fa-pencil"></i>
+        </div>
+        <p id="errorR" class="hide">Las contraseñas no coinciden!</p>
+        <label for="fecha">Fecha de Nacimiento: </label>
+        <div class="item">
+          <input
+            type="date"
+            id="fecha"
+            name="fecha"
+            title="Use una fecha valida"
+            max="2024-01-01"
+            disabled
+          />
+          <i id="editDate" class="fa-solid fa-pencil"></i>
+        </div>
+        <button type="button" id="saveA">Guardar Cambios</button>
+        <button type="button" id="salirA">Salir</button>
+      </form>
+    </div>
+    <div id="hiddenCPW" class="hiddenC hide">
+      <form id="pass" class="">
+        <div class="item">
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Contraseña"
+            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$"
+            title="La contraseña debe tener al menos 8 caracteres, incluyendo una letra mayúscula, una letra minúscula y un número."
+            disabled
+          />
+          <i id="editPass" class="fa-solid fa-pencil"></i>
+        </div>
+        <div id="errorBar" class="hide">
+          <p id="quality">Seguridad de la contraseña:</p>
+          <div class="barra">
+            <div id="rojo"></div>
+            <div id="naranja"></div>
+            <div id="amarillo"></div>
+            <div id="verde"></div>
+          </div>
+          <p id="errorS"></p>
+        </div>
+        <div class="item">
+          <input
+            type="password"
+            id="password2"
+            name="password2"
+            placeholder="Repetir Contraseña"
+            title="Por favor, repite la misma contraseña."
+            disabled
+          />
+        </div>
+        <p id="errorR" class="hide">Las contraseñas no coinciden!</p>
+        <button type="button" id="saveB">Guardar Cambios</button>
+        <button type="button" id="salirB">Salir</button>
+      </form>
+    </div>
+    <div id="main" class="container">
+      <h2>Mi perfil</h2>
+      <br />
+      <img id="img" src="Styles/Src/user.png" alt="" />
+      <br />
+      <div class="inp">
+        <input type="text" name="" id="name" disabled />
+        <input type="text" name="" id="email" disabled />
+      </div>
+      <br />
+      <div class="botones">
+        <button id="profile">Actualizar mi perfil</button>
+        <button id="passwd">Cambiar mi contraseña</button>
+        <button id="photo">Cambiar mi foto</button>
+        <input
+          type="file"
+          accept="image/*"
+          id="fileInput"
+          style="display: none"
+        />
+        <hr />
+        <button type="button" class="signOut" id="signOut">
+          Cerrar Sesión
+        </button>
+        <button type="button" class="signOut" id="delete">
+          Eliminar mi cuenta
+        </button>
+      </div>
+    </div>
+    <footer class="foot">
+      <div class="content">
+        <img src="./Styles/Src/Logo.png" alt="" />
+        <p><br />&copy; 2024 Where Quake. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+    <script src="./Scripts/profile.js"></script>
+  </body>
+</html>

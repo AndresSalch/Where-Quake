@@ -1,0 +1,303 @@
+@import url(https://db.onlinewebfonts.com/c/91d3afe918937141b6ae8e43b1005bc8?family=Sharp+Grotesk+Book+25+Regular);
+
+body,
+html {
+  font-family: "Sharp Grotesk Book 25 Regular", sans-serif;
+  background-color: black;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Startup */
+
+ul.hlist {
+  width: 75%;
+  position: fixed;
+  justify-content: space-evenly;
+  list-style: none;
+  display: flex;
+  font-size: large;
+  z-index: 5;
+}
+
+li.hitem {
+  z-index: 2;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  background-color: #0d0d0d;
+  width: 4px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 10pt;
+}
+
+.hide {
+  display: none !important;
+}
+
+.current {
+  border-radius: 3pt;
+  background-color: rgba(255, 255, 255, 0.897);
+  color: #000000;
+  text-decoration: none;
+  padding: 3pt;
+}
+
+.access {
+  text-decoration: none;
+  color: white;
+  padding: 3pt;
+}
+
+.current:hover,
+.access:hover {
+  transition: ease-in-out;
+  border-radius: 3pt;
+  background-color: rgba(255, 255, 255, 0.897);
+  color: #000000;
+}
+/* End */
+
+.container {
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+  background-color: rgb(247, 247, 247);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 20px;
+  border: 1px solid #0d0d0d;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  color: black;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.hiddenC {
+  max-width: 400px;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.hiddenC button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #ffffff;
+  background-color: #181818;
+}
+
+.item {
+  display: flex;
+  color: #000000;
+  outline: none;
+  width: 100%;
+  padding: 8px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-sizing: border-box;
+  color-scheme: dark;
+}
+
+i {
+  cursor: pointer;
+}
+
+i:hover {
+  background-color: #a8a8a8;
+  border-radius: 10px;
+}
+
+.hiddenC input {
+  outline: none;
+  color: black;
+  background: none;
+  border: none;
+  width: 100%;
+}
+
+#img {
+  height: 100px;
+  max-width: 75%;
+}
+
+.inp input {
+  width: 75%;
+  margin-top: 10px;
+  border: none;
+  text-align: center;
+  font-size: larger;
+}
+
+.botones button {
+  display: block;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+  cursor: pointer;
+  background-color: rgb(14, 14, 14);
+  width: 75%;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+hr {
+  width: 90%;
+}
+
+.barra {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+#rojo {
+  background-color: rgb(32, 32, 32);
+  height: 10px;
+  width: 95px;
+}
+#naranja {
+  background-color: rgb(32, 32, 32);
+  height: 10px;
+  width: 95px;
+}
+#amarillo {
+  background-color: rgb(32, 32, 32);
+  height: 10px;
+  width: 95px;
+}
+#verde {
+  background-color: rgb(32, 32, 32);
+  height: 10px;
+  width: 95px;
+}
+
+#errorS {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  color: red;
+}
+
+#errorR {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  color: red;
+}
+
+.signOut {
+  background-color: rgb(179, 23, 23) !important;
+}
+
+.foot {
+  padding-top: 1%;
+  background-color: black;
+  width: 100%;
+}
+
+.content {
+  text-align: center;
+  color: white;
+}
+
+.content img {
+  width: 6%;
+}
+
+/*Kit*/
+
+#textarea,
+#textzone {
+  outline: none;
+  width: 100%;
+}
+
+#textarea {
+  padding-bottom: 10%;
+}
+
+.post {
+  font-family: sans-serif;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: white;
+  color: black;
+  font-size: small;
+  margin-bottom: 15px;
+}
+
+.tittle,
+.user {
+  font-weight: bold;
+}
+
+.main {
+  text-align: center;
+  font-size: x-large;
+}
+
+#exit {
+  position: fixed;
+  right: 20px;
+  font-size: x-large;
+  cursor: pointer !important;
+}
+
+.messages {
+  color: white;
+  position: absolute;
+  right: 0;
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  width: 50%;
+  height: 100vh;
+  overflow-y: scroll;
+  z-index: 100;
+}
+
+.delete,
+.edit {
+  color: white;
+  border: none;
+  background-color: rgb(12, 12, 12);
+  margin-right: 5px;
+  padding: 5px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.content {
+  text-align: center;
+  color: white;
+}

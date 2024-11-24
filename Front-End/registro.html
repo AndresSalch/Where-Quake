@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Where Quake - Registro</title>
+    <link rel="icon" type="image/x-icon" href="./Styles/Src/Logo.ico" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./Styles/registro.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h2>Sé usuario de Where Quake!</h2>
+      <br />
+      <div id="success" class="success hide">
+        <p>Registro exitoso!</p>
+        <p id="insert"></p>
+      </div>
+      <form id="registroForm" class="">
+        <div class="item">
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Nombre"
+            pattern="^[a-zA-Z\s]{3,}$"
+            title="El nombre debe contener solo letras, con un mínimo de 3 caracteres."
+            required
+          />
+          <i class="fa-solid fa-user"></i>
+        </div>
+        <div class="item">
+          <input
+            type="text"
+            id="apellidos"
+            name="apellidos"
+            placeholder="Apellidos"
+            pattern="^[a-zA-Z\s]{3,}$"
+            title="El apellido debe contener solo letras, con un mínimo de 3 caracteres."
+            required
+          />
+        </div>
+        <div class="item">
+          <input
+            type="email"
+            id="email"
+            name="email"
+            title="Digite un formato de correo válido"
+            placeholder="Correo Electrónico"
+            required
+          />
+          <i class="fa-solid fa-envelope"></i>
+        </div>
+        <div class="item">
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Contraseña"
+            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$"
+            title="La contraseña debe tener al menos 8 caracteres, incluyendo una letra mayúscula, una letra minúscula y un número."
+            required
+          />
+          <i class="fa-solid fa-lock"></i>
+        </div>
+        <div id="errorBar" class="hide">
+          <p id="quality">Seguridad de la contraseña:</p>
+          <div class="barra">
+            <div id="rojo"></div>
+            <div id="naranja"></div>
+            <div id="amarillo"></div>
+            <div id="verde"></div>
+          </div>
+          <p id="errorS"></p>
+        </div>
+        <div class="item">
+          <input
+            type="password"
+            id="password2"
+            name="password2"
+            placeholder="Repetir Contraseña"
+            title="Por favor, repite la misma contraseña."
+            required
+          />
+        </div>
+        <p id="errorR" class="hide">Las contraseñas no coinciden!</p>
+        <div class="item">
+          <input
+            type="tel"
+            id="numero"
+            name="numero"
+            placeholder="Numero de telefono"
+            pattern="[2-8][0-9]{7}"
+            title="El número de teléfono debe tener 8 dígitos y comenzar con 2-8."
+            required
+          />
+          <i class="fa-solid fa-mobile"></i>
+        </div>
+        <label for="fecha">Fecha de Nacimiento: </label>
+
+        <div class="item">
+          <input
+            type="date"
+            id="fecha"
+            name="fecha"
+            title="Use una fecha valida"
+            max="2024-01-01"
+            required
+          />
+        </div>
+        <button type="submit">Registrarme</button>
+      </form>
+    </div>
+    <script src="Scripts/registro.js"></script>
+  </body>
+</html>

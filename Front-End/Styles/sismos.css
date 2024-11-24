@@ -1,0 +1,370 @@
+@import url(https://db.onlinewebfonts.com/c/91d3afe918937141b6ae8e43b1005bc8?family=Sharp+Grotesk+Book+25+Regular);
+
+html,
+body {
+  font-family: "Sharp Grotesk Book 25 Regular", sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-optical-sizing: auto;
+  font-style: normal;
+  background-color: #000000;
+  background-repeat: no-repeat;
+  z-index: 3;
+}
+
+ul.hlist {
+  width: 75%;
+  position: fixed;
+  justify-content: space-evenly;
+  list-style: none;
+  display: flex;
+  font-size: large;
+  z-index: 5;
+}
+
+li.hitem {
+  z-index: 2;
+}
+
+::-webkit-scrollbar {
+  background-color: #0d0d0d;
+  width: 4px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 10pt;
+}
+
+.current {
+  border-radius: 3pt;
+  background-color: rgba(255, 255, 255, 0.897);
+  color: #000000;
+  text-decoration: none;
+  padding: 3pt;
+}
+
+.access {
+  text-decoration: none;
+  color: white;
+  padding: 3pt;
+  cursor: pointer;
+}
+
+.hide {
+  display: none !important;
+}
+
+.current:hover,
+.access:hover {
+  transition: ease-in-out;
+  border-radius: 3pt;
+  background-color: rgba(255, 255, 255, 0.897);
+  color: #000000;
+}
+
+.fa-x {
+  border-radius: 2pt;
+  color: white;
+  cursor: pointer;
+  padding: 2%;
+  margin: 3%;
+}
+
+.fa-x:hover {
+  transition: ease-in-out;
+  background-color: white;
+  color: black;
+}
+
+.MainBody {
+  display: flex;
+  height: 100%;
+}
+
+#earth_div {
+  flex: 1;
+}
+
+.we-pm-icon3 {
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: 64;
+}
+
+.we-pm-icon2 {
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: 64;
+  width: 200px !important;
+  height: 100px !important;
+  margin-left: -50px !important;
+  margin-top: -95px !important;
+}
+
+.we-pm-icon {
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: 64;
+}
+
+.we-pp-wrapper,
+.we-pp-tip {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+  color: white;
+}
+
+.we-pp-content {
+  background-color: transparent;
+}
+
+.Rightpane p {
+  color: white;
+  text-align: center;
+}
+
+.Rightpane {
+  background-color: #0d0d0d;
+  width: 20%;
+  padding-left: 1%;
+  padding-right: 1%;
+  overflow-y: scroll;
+}
+
+.input-group {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  background-color: white;
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+  height: 3%;
+}
+
+.input-group input {
+  font-family: "Sharp Grotesk Book 25 Regular", sans-serif;
+  width: 80%;
+  background-color: transparent;
+  border: none;
+  text-align: center;
+  outline: none;
+}
+
+.input-group button {
+  background-color: transparent;
+  color: rgb(0, 0, 0);
+  border: none;
+  cursor: pointer;
+}
+
+.input-group button:hover {
+  transition: ease-in-out;
+  color: rgb(0, 110, 255);
+}
+
+.selectors {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.selectors select {
+  font-size: small;
+  width: 30%;
+  background-color: transparent;
+  color: white;
+  text-align: center;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid white;
+}
+
+.selectors option {
+  background-color: #0d0d0d;
+  color: white;
+  padding: 10px;
+}
+
+.inputs #num {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid white;
+  outline: none;
+  color: white;
+  text-align: center;
+}
+
+.itemPane {
+  overflow-y: scroll;
+}
+
+.item {
+  width: 100%;
+  background-color: #111111;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+  border-radius: 3%;
+  margin: 10px;
+  padding: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.newitem {
+  width: 100%;
+  background-color: #6d0000;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+  border-radius: 3%;
+  margin: 10px;
+  padding: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.item:hover {
+  transition: ease-in-out;
+  background-color: #1a1a1a;
+}
+
+.newitem:hover {
+  transition: ease-in-out;
+  background-color: #1b0000;
+}
+
+.Big {
+  display: grid;
+}
+
+.values {
+  padding-left: 10px;
+}
+
+.subvalue {
+  display: flex;
+  justify-content: start;
+  font-size: small;
+  font-weight: bold;
+  align-items: center;
+}
+
+#Info,
+#Date,
+#Date2 {
+  padding-right: 10px;
+}
+
+.subvalue2 {
+  display: flex;
+  justify-content: start;
+  font-size: x-small;
+  align-items: center;
+}
+
+.subvalue3 {
+  display: flex;
+  justify-content: start;
+  font-size: x-small;
+  align-items: center;
+}
+
+#Flag {
+  width: 10%;
+  height: min-content;
+}
+
+#Place {
+  font-size: x-small;
+}
+
+.foot {
+  padding-top: 1%;
+  background-color: black;
+  width: 100%;
+}
+
+.content {
+  text-align: center;
+  color: white;
+}
+
+.content img {
+  width: 6%;
+}
+
+/*Kit*/
+
+#textarea,
+#textzone {
+  outline: none;
+  width: 100%;
+}
+
+#textarea {
+  padding-bottom: 10%;
+}
+
+.post {
+  font-family: sans-serif;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: white;
+  color: black;
+  font-size: small;
+  margin-bottom: 15px;
+}
+
+.tittle,
+.user {
+  font-weight: bold;
+}
+
+.main {
+  text-align: center;
+  font-size: x-large;
+}
+
+#exit {
+  position: fixed;
+  right: 20px;
+  font-size: x-large;
+  cursor: pointer !important;
+}
+
+.messages {
+  color: white;
+  position: absolute;
+  right: 0;
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  width: 50%;
+  height: 100vh;
+  overflow-y: scroll;
+  z-index: 100;
+}
+
+.delete,
+.edit {
+  color: white;
+  border: none;
+  background-color: rgb(12, 12, 12);
+  margin-right: 5px;
+  padding: 5px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.content {
+  text-align: center;
+  color: white;
+}

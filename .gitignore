@@ -1,0 +1,39 @@
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
+venv/
+.env/
+
+# Node -1000 aura points if i upload this folder LMAO
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Logs
+*.log
+
+# Python cache
+*.pyc
+*.pyd
+*.pyo
+*.pdb
+
+# macOS files
+.DS_Store
+
+# Compiled binary and object files
+*.so
+
+# Front-End specific
+Front-End/Pfps/
+
+# IDE-specific
+.idea/
+.vscode/
+
+# Backup files
+*.bak
+*.swp

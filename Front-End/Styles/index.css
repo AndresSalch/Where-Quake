@@ -1,0 +1,356 @@
+@import url(https://db.onlinewebfonts.com/c/91d3afe918937141b6ae8e43b1005bc8?family=Sharp+Grotesk+Book+25+Regular);
+
+@font-face {
+  font-family: "Sharp Grotesk Book 25 Regular";
+  src: url("https://db.onlinewebfonts.com/t/91d3afe918937141b6ae8e43b1005bc8.eot");
+  src: url("https://db.onlinewebfonts.com/t/91d3afe918937141b6ae8e43b1005bc8.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/91d3afe918937141b6ae8e43b1005bc8.woff2")
+      format("woff2"),
+    url("https://db.onlinewebfonts.com/t/91d3afe918937141b6ae8e43b1005bc8.woff")
+      format("woff"),
+    url("https://db.onlinewebfonts.com/t/91d3afe918937141b6ae8e43b1005bc8.ttf")
+      format("truetype"),
+    url("https://db.onlinewebfonts.com/t/91d3afe918937141b6ae8e43b1005bc8.svg#Sharp Grotesk Book 25 Regular")
+      format("svg");
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: "Sharp Grotesk Book 25 Regular", sans-serif;
+  font-style: normal;
+  background-color: #000000 !important;
+  background-repeat: no-repeat;
+}
+
+ul.hlist {
+  margin-top: 15px;
+  font-family: "Sharp Grotesk Book 25 Regular", sans-serif;
+  width: 100%;
+  position: fixed;
+  justify-content: space-evenly;
+  list-style: none;
+  display: flex;
+  font-size: large;
+  z-index: 5;
+}
+
+::-webkit-scrollbar {
+  background-color: #0d0d0d;
+  width: 4px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 10pt;
+}
+
+.hide {
+  display: none !important;
+}
+
+.current {
+  border-radius: 3pt;
+  background-color: rgba(255, 255, 255, 0.897);
+  color: #000000;
+  text-decoration: none;
+  padding: 3pt;
+}
+
+.access {
+  text-decoration: none;
+  color: white;
+  padding: 3pt;
+  cursor: pointer !important;
+}
+
+.access:hover,
+.current:hover {
+  background-color: rgba(255, 255, 255, 0.897);
+  color: #000000;
+  border-radius: 3pt;
+}
+
+img.Logo1 {
+  width: 20%;
+}
+
+div.Center {
+  display: flex;
+  justify-content: center;
+  padding-top: 10%;
+  width: 100%;
+  position: absolute;
+}
+
+.buttons {
+  font-family: "Sharp Grotesk Book 25 Regular", sans-serif;
+  padding-top: 23%;
+  position: absolute;
+  color: white;
+  font-size: x-large;
+}
+
+.Logo1 {
+  position: absolute;
+}
+
+.buttons {
+  font-family: "Sharp Grotesk Book 25 Regular", sans-serif;
+  padding-top: 23%;
+  position: absolute;
+  color: white;
+  font-size: x-large;
+}
+
+a.button {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: x-large;
+  padding: 5pt;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: none;
+  border-radius: 15pt;
+  margin-left: 5pt;
+  margin-right: 5pt;
+}
+
+a.button:hover {
+  transition: 0.3s;
+  padding: 6pt;
+  color: #1a3d7f;
+  background-color: white;
+  font-weight: bold;
+}
+
+div.slogan {
+  margin-top: 5%;
+  position: relative;
+  text-align: center;
+  font-size: xx-large;
+  font-weight: bold;
+  color: white;
+  background-color: rgb(31, 28, 28);
+  width: 100%;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#block {
+  width: 100%;
+  min-height: 100vh;
+  position: fixed;
+  z-index: 1;
+  background: rgb(55, 112, 235);
+  background: -moz-linear-gradient(
+    180deg,
+    rgba(55, 112, 235, 1) 35%,
+    rgba(2, 0, 36, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    180deg,
+    rgba(55, 112, 235, 1) 35%,
+    rgba(2, 0, 36, 1) 100%
+  );
+  background: linear-gradient(
+    180deg,
+    rgba(55, 112, 235, 1) 35%,
+    rgba(2, 0, 36, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3770eb", endColorstr="#020024", GradientType=1);
+}
+
+.jumps {
+  height: calc(3 * 100vh);
+}
+
+.jumps2 {
+  height: calc(100vh / 4);
+}
+
+#Background {
+  width: 100%;
+  height: 100vh;
+}
+
+#Nube,
+#Nube2 {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+}
+
+#Nube2 {
+  z-index: -1;
+  top: 90px;
+}
+
+#Nube {
+  z-index: -1;
+}
+
+.card-body {
+  font-size: medium;
+  background-color: #000000;
+  font-family: "Sharp Grotesk Book 25 Regular", sans-serif;
+}
+
+.card-title {
+  font-weight: bold;
+}
+
+.card {
+  margin-left: 10pt;
+  margin-right: 10pt;
+}
+
+#Navback {
+  position: fixed;
+}
+
+#upper:hover {
+  transition: ease-in-out;
+  background-color: #ffffff;
+}
+
+.foot {
+  font-family: "Sharp Grotesk Book 25 Regular", sans-serif;
+  margin-top: 10%;
+  padding-bottom: 1%;
+  padding-top: 1%;
+  background-color: black;
+  width: 100%;
+}
+
+.fading {
+  opacity: 1;
+}
+
+.faded {
+  opacity: 0;
+}
+
+div.Center {
+  display: flex;
+  justify-content: center;
+  padding-top: 10%;
+  width: 100%;
+  position: absolute;
+}
+
+.buttons {
+  font-family: "Sharp Grotesk Book 25 Regular", sans-serif;
+  padding-top: 23%;
+  position: absolute;
+  color: white;
+  font-size: x-large;
+}
+
+.content img {
+  width: 6%;
+}
+
+#Nube,
+#Nube2,
+#block {
+  transition: left 0.2s ease-out, right 0.2s ease-out, opacity 0.2s ease-out;
+}
+
+#separator {
+  transition: opacity 1s ease-out;
+}
+
+.lower {
+  text-align: center;
+  color: white;
+  font-size: xx-large;
+  font-weight: normal;
+}
+
+.botom {
+  text-align: center;
+  color: white;
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+.separator {
+  font-family: "Sharp Grotesk Book 25 Regular", sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+.mainC {
+  width: 70%;
+  text-align: center;
+}
+
+/*Kit*/
+
+#textarea,
+#textzone {
+  outline: none;
+  width: 100%;
+}
+
+#textarea {
+  padding-bottom: 10%;
+}
+
+.post {
+  padding: 10px;
+  border-radius: 15px;
+  background-color: white;
+  color: black;
+  font-size: small;
+  margin-bottom: 15px;
+}
+
+.tittle,
+.user {
+  font-weight: bold;
+}
+
+.main {
+  text-align: center;
+  font-size: x-large;
+}
+
+#exit {
+  position: fixed;
+  right: 20px;
+  font-size: x-large;
+  cursor: pointer;
+}
+
+.messages {
+  color: white;
+  position: fixed;
+  right: 0;
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  width: 50%;
+  height: 100vh;
+  overflow-y: scroll;
+  z-index: 5;
+}
+
+.delete,
+.edit {
+  color: white;
+  border: none;
+  background-color: rgb(12, 12, 12);
+  margin-right: 5px;
+  padding: 5px;
+  border-radius: 15px;
+}
+
+.content {
+  text-align: center;
+  color: white;
+}
