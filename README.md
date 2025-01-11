@@ -3,6 +3,7 @@
 # Where Quake
 Where Quake es una aplicación web de pila completa diseñada para el monitoreo en tiempo real de terremotos y la participación de los usuarios. Esta aplicación utiliza datos del Servicio Geológico de los Estados Unidos (USGS) para proporcionar información en vivo sobre terremotos, incluyendo ubicación, magnitud y profundidad, permitiendo a los usuarios mantenerse informados sobre la actividad sísmica en todo el mundo.
 
+![Alt Text](https://i.imgur.com/9lcICKn.gif)
 
 La plataforma también permite la interacción del usuario a través de una función de noticias, donde los usuarios pueden leer y publicar actualizaciones relevantes a la información y preparación para terremotos. Los usuarios registrados tienen perfiles personales, autenticación segura y la capacidad de rastrear eventos sísmicos pasados y sus detalles. Con una interfaz moderna e intuitiva, Where Quake busca hacer que los datos en tiempo real sean accesibles y útiles tanto para usuarios casuales como para profesionales interesados en la actividad sísmica.
 
