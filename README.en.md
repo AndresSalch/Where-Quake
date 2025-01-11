@@ -7,7 +7,6 @@ Where Quake is a full-stack web application designed for real-time earthquake mo
 
 The platform also allows user interaction through a news feature, where users can read and post updates related to earthquake information and preparedness. Registered users have personal profiles, secure authentication, and the ability to track past seismic events and their details. With a modern and intuitive interface, Where Quake aims to make real-time data accessible and useful to both casual users and professionals interested in seismic activity.
 
-
 # Credits
 
 **Earthquake Data:**
@@ -23,6 +22,35 @@ News Posting: A space for users to read and post articles about earthquake-relat
 Interactive Map and Data Visualization: Visual representation of earthquake data with detailed information about each event.
 This project demonstrates the integration of various technologies, including RESTful API design, data retrieval, secure user authentication, and a smooth user experience in both front-end and back-end.
 
+---
+
+# Usage
+
+## Create the Database
+
+I left a `.sql` file to create the tables and stored procedures.
+
+**You need to add the connection parameters to the database in the following file:**
+```
+Back-End\Service\dbService.py
+```
+## Start the API
+
+You need to install the requirements and then run `main.py`.
+
+```python
+pip install -r requirements.txt
+
+# Run main.py
+python Back-End\main.py
+```
+
+## Start the Web Page
+Run the web page using npm.
+
+```javascript
+npm start
+```
 ---
 
 # Database Structure
