@@ -25,7 +25,7 @@ class UserService:
     def select(self, email, password):
         cursor = self.con.cursor()
         try:
-            cursor.execute("EXEC sp_SelectUser ?", (email,))
+            cursor.execute("EXEC sp_SelectUser ?", (email))
             var = cursor.fetchone()
             if var and bcrypt.checkpw(password.encode('utf-8'), var[4].encode('utf-8')):
                 return User(var[0], var[1], var[2], var[3], var[4], var[5], var[6], var[7], var[8], var[9], var[10]).toJSON()

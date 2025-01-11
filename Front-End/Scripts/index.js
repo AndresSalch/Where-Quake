@@ -52,16 +52,17 @@ window.onload = function () {
 };
 
 function tryfetch() {
-  fetch(`http://localhost:3000/retrieve`)
+  return fetch(`http://localhost:3000/retrieve`)
     .then((response) => response.json())
     .then((data) => {
       if (data.error) {
+        console.error("Error fetching user:", data.error);
       } else {
         user = data;
-        userValidated();
+        userValidated(); 
       }
     })
-    .catch((error) => console.log("-" + error));
+    .catch((error) => console.log("Error in tryfetch:", error));
 }
 
 function getnews() {
@@ -104,7 +105,7 @@ function userValidated() {
   const userPanel = document.getElementById("user");
   const i = document.createElement("i");
 
-  if (user.rol) {
+  if (user.rol = 0) {
     admin.classList.remove("hide");
   }
 

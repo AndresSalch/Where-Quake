@@ -63,8 +63,17 @@ function userValidated() {
   const userPanel = document.getElementById("user");
   const i = document.createElement("i");
 
-  if (user.rol) {
-    admin.classList.remove("hide");
+  console.log("User validated:", user);
+
+  if (user && user.rol !== undefined) {
+    if (user.rol === 0) {
+      admin.classList.remove("hide");
+    } else {
+      admin.classList.add("hide");
+    }
+  } else {
+    console.error("User data is invalid:", user);
+    return;
   }
 
   add.classList.remove("hide");
@@ -72,8 +81,12 @@ function userValidated() {
   i.classList.add("fa-solid");
   i.classList.add("fa-user");
 
-  userPanel.innerText = user.nombre + " ";
-  userPanel.appendChild(i);
+  if (user.nombre) {
+    userPanel.innerText = user.nombre + " ";
+    userPanel.appendChild(i);
+  } else {
+    console.error("User name is missing!");
+  }
 }
 
 async function onGetNews() {

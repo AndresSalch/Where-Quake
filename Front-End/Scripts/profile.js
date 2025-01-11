@@ -72,28 +72,6 @@ function tryfetch() {
     });
 }
 
-function userValidated() {
-  const add = document.getElementById("add");
-  const img = document.getElementById("img");
-  const userPanel = document.getElementById("user");
-  const i = document.createElement("i");
-  const name = document.getElementById("name");
-  const email = document.getElementById("email");
-
-  if (user.rol) {
-    document.getElementById("admin").classList.remove("hide");
-  }
-
-  add.classList.remove("hide");
-  i.classList.add("fa-solid", "fa-user");
-
-  userPanel.innerText = `${user.nombre} `;
-  userPanel.appendChild(i);
-
-  img.src = user.photo;
-  name.value = `${user.nombre} ${user.apellidos}`;
-  email.value = user.email;
-}
 
 document.getElementById("signOut").addEventListener("click", () => {
   fetch(`http://localhost:3000/end`)

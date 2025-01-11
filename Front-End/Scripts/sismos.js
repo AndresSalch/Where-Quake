@@ -338,9 +338,13 @@ news.addEventListener("click", function () {
   content.classList.remove("hide");
 });
 
-window.onload = function () {
-  tryfetch();
-  getnews();
+window.onload = async function () {
+  try {
+    await tryfetch(); 
+    await getnews();  
+  } catch (error) {
+    console.error("Error during onload:", error);
+  }
 };
 
 function getnews() {
@@ -375,26 +379,27 @@ function getnews() {
     .catch((error) => console.log("-" + error));
 }
 
-function tryfetch() {
-  fetch(`http://localhost:3000/retrieve`)
-    .then((response) => response.json())
-    .then((data) => {
-      if (data.error) {
-        console.error("Error retrieving user data:", data.error);
-        window.location.href = "error2.html";
-      } else {
-        user = data;
-        if (!user) {
-          window.location.href = "error2.html";
-        } else {
-          userValidated();
-        }
-      }
-    })
-    .catch((error) => {
-      console.error("Error fetching user data:", error);
+async function tryfetch() {
+  try {
+    const response = await fetch(`http://localhost:3000/retrieve`);
+    const data = await response.json();
+
+    if (data.error) {
+      console.error("Error retrieving user data:", data.error);
       window.location.href = "error2.html";
-    });
+    } else {
+      user = data;
+      if (!user) {
+        console.error("User data is invalid");
+        window.location.href = "error2.html"; 
+      } else {
+        userValidated(); 
+      }
+    }
+  } catch (error) {
+    console.error("Error fetching user data:", error);
+    window.location.href = "error2.html"; 
+  }
 }
 
 function userValidated() {
@@ -403,7 +408,9 @@ function userValidated() {
   const userPanel = document.getElementById("user");
   const i = document.createElement("i");
 
-  if (user.rol) {
+  console.log("User data:", user);
+
+  if (user && user.rol === 0) {  
     admin.classList.remove("hide");
   }
 

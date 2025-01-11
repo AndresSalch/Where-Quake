@@ -1,53 +1,96 @@
 var user = null;
 
 document.addEventListener("DOMContentLoaded", async function () {
-  await tryfetch();
-  if (!user || !user.rol) {
-    window.location.href = "error.html";
-  } else {
-    await fetchUsers();
-    await delay(500);
-    await fetchNews();
+  try {
+    await tryfetch();
+    if (!user || user.rol == 0) {
+      window.location.href = "error.html";
+    } else {
+      await fetchUsers();
+      await delay(500);
+      await fetchNews();
 
-    document
-      .getElementById("publishForm")
-      .addEventListener("submit", function (event) {
-        event.preventDefault();
+      document
+        .getElementById("publishForm")
+        .addEventListener("submit", async function (event) {
+          event.preventDefault();
 
-        const title = document.getElementById("newsTitle").value;
-        const content = document.getElementById("newsContent").value;
+          const title = document.getElementById("newsTitle").value;
+          const content = document.getElementById("newsContent").value;
 
-        if (title && content) {
-          fetch(`http://localhost:5000/news/create`, {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-              title,
-              content,
-              date: new Date().toISOString(),
-              userId: user.id_usuario,
-            }),
-          })
-            .then((response) => response.json())
-            .then((data) => {
+          if (title && content) {
+            try {
+              const response = await fetch(`http://localhost:5000/news/create`, {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                  title,
+                  content,
+                  date: new Date().toISOString(),
+                  userId: user.id_usuario,
+                }),
+              });
+
+              const data = await response.json();
+
               if (data.error) {
                 console.error("Error publishing news:", data.error);
               } else {
-                fetchNews();
+                await fetchNews();
                 document.getElementById("newsTitle").value = "";
                 document.getElementById("newsContent").value = "";
               }
-            })
-            .catch((error) => console.error("Error publishing news:", error));
-        }
-      });
+            } catch (error) {
+              console.error("Error publishing news:", error);
+            }
+          }
+        });
+    }
+  } catch (error) {
+    console.error("Error loading page:", error);
   }
 });
 
+// Helper function to fetch user
+function tryfetch() {
+  return fetch(`http://localhost:3000/retrieve`)
+    .then((response) => response.json())
+    .then((data) => {
+      if (data.error) {
+        console.error("Error fetching user:", data.error);
+      } else {
+        user = data;
+        userValidated();
+      }
+    })
+    .catch((error) => console.log("-" + error));
+}
+
+// Function to validate the user
+function userValidated() {
+  const admin = document.getElementById("admin");
+  const add = document.getElementById("add");
+  const userPanel = document.getElementById("user");
+  const i = document.createElement("i");
+
+  if (user.rol) {
+    admin.classList.remove("hide");
+  }
+
+  add.classList.remove("hide");
+
+  i.classList.add("fa-solid");
+  i.classList.add("fa-user");
+
+  userPanel.innerText = user.nombre + " ";
+  userPanel.appendChild(i);
+}
+
+// Fetch users
 function fetchUsers() {
-  fetch(`http://localhost:5000/user/select/all`)
+  return fetch(`http://localhost:5000/user/select/all`)
     .then((response) => response.json())
     .then((data) => {
       if (data.error) {
@@ -94,8 +137,9 @@ function fetchUsers() {
     .catch((error) => console.error("Error fetching users:", error));
 }
 
+// Fetch news
 function fetchNews(retries = 5, delay = 1000) {
-  fetch(`http://localhost:5000/news/select`)
+  return fetch(`http://localhost:5000/news/select`)
     .then((response) => {
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
@@ -170,39 +214,8 @@ function fetchNews(retries = 5, delay = 1000) {
       }
     });
 }
+
+// Delay function
 function delay(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
-}
-
-function tryfetch() {
-  fetch(`http://localhost:3000/retrieve`)
-    .then((response) => response.json())
-    .then((data) => {
-      if (data.error) {
-        console.error("Error fetching user:", data.error);
-      } else {
-        user = data;
-        userValidated();
-      }
-    })
-    .catch((error) => console.log("-" + error));
-}
-
-function userValidated() {
-  const admin = document.getElementById("admin");
-  const add = document.getElementById("add");
-  const userPanel = document.getElementById("user");
-  const i = document.createElement("i");
-
-  if (user.rol) {
-    admin.classList.remove("hide");
-  }
-
-  add.classList.remove("hide");
-
-  i.classList.add("fa-solid");
-  i.classList.add("fa-user");
-
-  userPanel.innerText = user.nombre + " ";
-  userPanel.appendChild(i);
 }

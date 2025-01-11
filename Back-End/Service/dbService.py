@@ -9,17 +9,20 @@ from Service.newsService import NewsService
 class dbService:
     def __init__(self) -> None:
 
-        server = '*'
-        database = '*'
+        server = 'localhost\\SQLEXPRESS' 
+        database = 'WQuake'  
         driver = '{ODBC Driver 18 for SQL Server}'
+        uid = 'sa'
+        pwd = '283235118'  
 
         connection_string = (
             f'DRIVER={driver};'
             f'SERVER={server};'
             f'DATABASE={database};'
-            f'Authentication=ActiveDirectoryInteractive;'
-            f'Encrypt=yes;'
-            f'TrustServerCertificate=no;'
+            f'UID={uid};'  
+            f'PWD={pwd};'  
+            f'Encrypt=no;' 
+            f'TrustServerCertificate=yes;' 
             f'Connection Timeout=30;'
         )
 
