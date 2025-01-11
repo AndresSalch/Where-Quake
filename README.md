@@ -6,6 +6,14 @@ Where Quake es una aplicación web de pila completa diseñada para el monitoreo 
 La plataforma también permite la interacción del usuario a través de una función de noticias, donde los usuarios pueden leer y publicar actualizaciones relevantes a la información y preparación para terremotos. Los usuarios registrados tienen perfiles personales, autenticación segura y la capacidad de rastrear eventos sísmicos pasados y sus detalles. Con una interfaz moderna e intuitiva, Where Quake busca hacer que los datos en tiempo real sean accesibles y útiles tanto para usuarios casuales como para profesionales interesados en la actividad sísmica.
 
 
+# Créditos
+
+**Datos de Terremotos:**
+Los datos de terremotos utilizados en esta aplicación provienen del Servicio Geológico de los Estados Unidos (USGS). Puedes consultar su API para más información sobre los datos sísmicos en tiempo real [aquí](https://earthquake.usgs.gov/).
+
+**Mapa 3D:**
+El mapa 3D utilizado en la aplicación es proporcionado por la librería WebGL Earth. Esta librería permite visualizar datos geoespaciales en un entorno interactivo en 3D. El proyecto fue creado por [WebGL Earth](https://github.com/webglearth/webglearth2), y puedes encontrar su código fuente en su repositorio oficial de GitHub.
+
 # Características Clave
 Datos de Terremotos en Tiempo Real: Datos en vivo obtenidos del USGS para monitorear terremotos a nivel global.
 Gestión de Usuarios: Registro seguro de usuarios, inicio de sesión y personalización de perfiles.
@@ -186,3 +194,5 @@ Esta API permite realizar operaciones CRUD sobre usuarios y noticias.
 |------------|-------------------|-----------------------------------|--------|
 | `GET`     | `/api/quake/new`       | Crea una nueva lista de Terremotos.           |
 | `POST`      | `/api/quake/update`       | Busca nuevos Terremotos a ser agregados a la lista a partir de la hora del terremoto más reciente de la lista anterior.       | {  starttime: [utc timestamp] }
+
+---
