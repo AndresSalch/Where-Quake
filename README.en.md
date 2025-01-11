@@ -1,3 +1,5 @@
+[![es](https://img.shields.io/badge/lang-es-yellow.svg)](https://github.com/AndresSalch/Where-Quake-/blob/master/README.md)
+
 # Where Quake
 Where Quake is a full-stack web application designed for real-time earthquake monitoring and user engagement. This application uses data from the United States Geological Survey (USGS) to provide live information about earthquakes, including location, magnitude, and depth, allowing users to stay informed about seismic activity worldwide.
 
