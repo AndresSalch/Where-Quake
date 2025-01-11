@@ -3,7 +3,13 @@
 # Where Quake
 Where Quake is a full-stack web application designed for real-time earthquake monitoring and user engagement. This application uses data from the United States Geological Survey (USGS) to provide live information about earthquakes, including location, magnitude, and depth, allowing users to stay informed about seismic activity worldwide.
 
-![IMG1](https://i.imgur.com/6Pf3b3N.png)
+---
+## Demos
+[![Main Page](https://img.youtube.com/vi/hVd66mMjh0g/maxresdefault.jpg)](https://www.youtube.com/watch?v=hVd66mMjh0g)
+
+[![Earth Quake Page](https://img.youtube.com/vi/aC3e9rajY8M/maxresdefault.jpg)](https://www.youtube.com/watch?v=aC3e9rajY8M)
+
+---
 
 The platform also allows user interaction through a news feature, where users can read and post updates related to earthquake information and preparedness. Registered users have personal profiles, secure authentication, and the ability to track past seismic events and their details. With a modern and intuitive interface, Where Quake aims to make real-time data accessible and useful to both casual users and professionals interested in seismic activity.
 
