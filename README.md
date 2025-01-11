@@ -28,6 +28,34 @@ Este proyecto demuestra la integración de varias tecnologías, incluyendo dise�
 
 ---
 
+# Uso
+
+## Crear la base de datos
+
+Dejé un archivo .sql para crear las tablas y los stored procedures
+
+**Hay que agregar los parametros para conectarse a la DB en la ruta:**
+```
+Back-End\Service\dbService.py
+```
+## Iniciar el api
+
+Se deben de instalar los requisitos y luego correr main.py
+
+```python
+pip install -r requirements.txt
+
+# Correr main.py
+python Back-End\main.py
+```
+
+## Iniciar la pagina web
+Correr la pagina usando npm
+```javascript
+npm start
+```
+---
+
 # Estructura de la Base de Datos
 ### Tabla `Users`
 
