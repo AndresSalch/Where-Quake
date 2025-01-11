@@ -230,3 +230,8 @@ This API allows CRUD operations on users and news.
 |------------|---------------------------|-------------------------------------------|--------|
 | `GET`     | `/api/quake/new`           | Creates a new list of Earthquakes.        | 
 | `POST`    | `/api/quake/update`        | Searches for new Earthquakes to be added to the list from the latest earthquake timestamp in the previous list. | { starttime: [utc timestamp] }
+
+---
+## License
+
+Where Quake © 2024 by Herberth Andrés Alfaro Vega is licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/).
