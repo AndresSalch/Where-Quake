@@ -232,3 +232,6 @@ Esta API permite realizar operaciones CRUD sobre usuarios y noticias.
 | `POST`      | `/api/quake/update`       | Busca nuevos Terremotos a ser agregados a la lista a partir de la hora del terremoto más reciente de la lista anterior.       | {  starttime: [utc timestamp] }
 
 ---
+## License
+
+Where Quake © 2024 by Herberth Andrés Alfaro Vega is licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/).
